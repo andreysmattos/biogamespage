@@ -1,0 +1,16 @@
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  font-style: normal;
+  font-weight: normal;
+  min-height: 100vh;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+$bio-green: #8bc53f;
+
+
+@import 'navbar';
+@import 'home';
+@import 'buttons';
+@import 'steps';

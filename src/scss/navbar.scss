@@ -1,0 +1,104 @@
+#mainNav {
+  width: 100vw;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  transition: all 0.8s;
+  border-bottom: rgba(29, 29, 29, 0.596);
+  background-color: rgba(255, 255, 255, 0) !important;
+  
+  .brand-img {
+    height: 75px;
+    transition: all 0.4s;
+  }
+
+  @mixin menu-item {
+    font-weight: normal;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 225;
+    line-height: 30px;
+  }
+
+  li:not(.-login, .-jogar)>a {
+    @include menu-item();
+    color: $bio-green;
+    &:hover {
+      color: darken($bio-green, 20%);
+    }
+  }
+  
+  li {
+    &.-jogar {
+      margin: 0px 15px;
+      &>a {
+        color: #fff;
+        &:hover {
+          color: $bio-green;;
+        }
+      }
+    }
+
+    &.-login {
+      &>a {
+        color: $bio-green;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &.-jogar,
+    &.-login {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  &.navbar-shrink {
+    background-color: rgb(255, 255, 255) !important;
+    opacity: 0.9;
+
+    li > a {
+      font-size: 1.1rem;
+    }
+
+    .brand-img {
+      height: 60px;
+       
+    }
+  }
+  .navbar-toggler {
+    background-color: $bio-green !important;
+    color: #fff !important;
+  }
+}
+
+.navbar-collapse {
+  transition: all 0.4s;
+}
+
+@media only screen and (max-width: 980px) {
+  #mainNav {
+    .brand-img {
+      height: 65px;
+      transition: all 0.4s;
+    }
+    .navbar-collapse {
+      background: rgba(255, 255, 255, 0.952);
+    }
+    li {
+      &.-jogar {
+        margin: 0px;
+      }
+      &.-login {
+        margin: 5px 0px 0px 0px;
+      }
+    }
+  }
+}

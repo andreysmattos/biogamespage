@@ -1,0 +1,34 @@
+@mixin button {
+    border-radius: 3px;
+    padding: 4px 14px;
+    border-radius: 3px;
+    padding: 10px 16px;
+    transition: all 0.4s;
+}
+
+a[role="button"] {
+    text-decoration: none !important;
+}
+
+.button-green {
+    @include button();
+    background-color: $bio-green;
+    border: 1.5px solid $bio-green;
+    color: white !important;
+    &:hover,
+    .active {
+        background-color: rgba(255, 255, 255, 0) !important;
+        color: $bio-green !important;
+    }
+}
+
+.button-outline-green {
+    @include button();
+    background-color: rgba(255, 255, 255, 0);
+    border: 1.5px solid $bio-green;
+    color: $bio-green !important;
+    &:hover {
+        background-color: $bio-green;
+        color: white !important;
+    }
+}
