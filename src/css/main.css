@@ -68,7 +68,7 @@ body {
     margin: 5px 0px 0px 0px; } }
 
 #home {
-  height: 90vh; }
+  overflow: auto; }
 
 .home-right {
   position: relative;
